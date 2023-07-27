@@ -32,7 +32,7 @@ function init() {
             }
             score++;
             scoreDisplay.innerText = score;
-            timeDisplay.innerText = 9;
+            time = 9;
             const randomIndex = Math.floor(Math.random() * words.length);
             wordDisplay.innerText = words[randomIndex];
         }
@@ -40,7 +40,7 @@ function init() {
 }
 
 function run() {
-    alert("클릭");
+    alert("게임시작");
     if (isplaying) {
         return;
     }
@@ -68,6 +68,7 @@ function getWords() {
 function countDown() {
     time > 0 ? time-- : (isplaying = false);
     if (!isplaying) {
+        alert("게임종료");
         clearInterval(timeInterval);
     }
     timeDisplay.innerText = time;
@@ -78,4 +79,13 @@ function buttonChange(text) {
     text === "게임시작"
         ? button.classList.remove("loading")
         : button.classList.add("loading");
+}
+
+const hambugerButton = document.querySelector(".hamburger");
+const header = document.querySelector(".header");
+const nav = document.querySelector(".nav");
+function hamburgermenu() {
+    hambugerButton.classList.toggle("activebutton");
+    header.classList.toggle("activeheader");
+    nav.classList.toggle("activenav");
 }
