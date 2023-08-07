@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/calculator.css" />
+
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="calculator">
+            <form class="form" name="forms">
+                <input
+                    oninput="resultchange()"
+                    class="resultinput"
+                    type="text"
+                    value="0"
+                    name="output"
+                />
+
+                <input
+                    onclick="clears()"
+                    type="button"
+                    class="lightgray"
+                    value="C"
+                />
+                <input
+                    type="button"
+                    class="lightgray"
+                    value="+/-"
+                    onclick="document.forms.output.value=-document.forms.output.value"
+                />
+                <input
+                    type="button"
+                    class="lightgray"
+                    value="%"
+                    onclick="document.forms.output.value+='%'"
+                />
+                <input
+                    type="button"
+                    class="operator"
+                    value="/"
+                    onclick="document.forms.output.value+='/'"
+                />
+                <input type="button" class="gray" value="7" onclick="seven()" />
+                <input type="button" class="gray" value="8" onclick="eight()" />
+
+                <input type="button" class="gray" value="9" onclick="nine()" />
+                <input
+                    type="button"
+                    class="operator"
+                    value="*"
+                    onclick="document.forms.output.value+='*'"
+                />
+                <input type="button" class="gray" value="4" onclick="four()" />
+                <input type="button" class="gray" value="5" onclick="five()" />
+                <input type="button" class="gray" value="6" onclick="six()" />
+                <input
+                    type="button"
+                    class="operator"
+                    value="-"
+                    onclick="document.forms.output.value+='-'"
+                />
+
+                <input type="button" class="gray" value="1" onclick="one()" />
+                <input type="button" class="gray" value="2" onclick="two()" />
+                <input type="button" class="gray" value="3" onclick="three()" />
+                <input
+                    type="button"
+                    class="operator"
+                    value="+"
+                    onclick="document.forms.output.value+='+'"
+                />
+                <input
+                    type="button"
+                    class="zero gray"
+                    value="0"
+                    onclick="zero()"
+                />
+                <input
+                    type="button"
+                    class="gray"
+                    value="."
+                    onclick="document.forms.output.value+='.'"
+                />
+                <input
+                    type="button"
+                    class="operator result resultbutton"
+                    value="="
+                    onclick="document.forms.output.value=eval(document.forms.output.value)"
+                />
+            </form>
+        </div>
+    </body>
+    <script src="js/calculator.js"></script>
+</html>

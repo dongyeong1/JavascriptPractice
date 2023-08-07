@@ -124,6 +124,7 @@ body {
         position: relative;
         flex-direction: column;
         align-items: flex-start;
+        /* flex-direction이 column이기때문에 align-items도 축이 바뀐다 */
     }
 
     .activenav {

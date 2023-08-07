@@ -1,29 +1,29 @@
 let target = document.querySelector("#dynamic");
 
 function randomString() {
-    let stringArr = ["Learn To HTML", "Learn to Python", "Learn to ruby"];
+    let stringArr = ["Learn To HTML"];
     let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
     let selectStringArr = selectString.split("");
     return selectStringArr;
 }
 
-function asd() {
+function dynamic() {
     target.textContent = "";
-    dynamic(randomString());
+    typing(randomString());
 }
 
-function dynamic(randomArr) {
+function typing(randomArr) {
     if (randomArr.length > 0) {
         target.textContent += randomArr.shift();
-        setTimeout(() => {
-            dynamic(randomArr);
-        }, 80);
+        // setTimeout(()=>typing(randomArr), 100);
+        setTimeout(function () {
+            return typing(randomArr);
+        }, 100);
     } else {
-        setTimeout(asd, 3000);
-        t;
+        setTimeout(dynamic, 3000);
     }
 }
-dynamic(randomString());
+typing(randomString());
 
 function blink() {
     target.classList.toggle("active");
