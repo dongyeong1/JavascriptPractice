@@ -1,0 +1,12 @@
+.list {
+    display: flex;
+}
+.item {
+    list-style-type: none;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    text-decoration: none;
+    display: block;
+}
