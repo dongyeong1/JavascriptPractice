@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/header.css" />
+
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Logo</a>
+            <ul class="menu-list">
+                <li><div class="cancel" onclick="menucancel()">취소</div></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="menuopen()">햄버거메뉴</div>
+        </header>
+        <section class="main"></section>
+        <div class="about">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+                perferendis illum id eos nam ad! Vero est numquam quas? Delectus
+                qui est velit ex necessitatibus nobis enim atque beatae error.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
+                eaque eos dolores autem commodi illum sint, iure eligendi libero
+                magni tempore porro doloremque officia voluptas! Accusamus ipsa
+                mollitia quae necessitatibus. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Fuga, perferendis illum id eos nam
+                ad! Vero est numquam quas? Delectus qui est velit ex
+                necessitatibus nobis enim atque beatae error. Lorem ipsum dolor
+                sit amet consectetur, adipisicing elit. Fugiat eaque eos dolores
+                autem commodi illum sint, iure eligendi libero magni tempore
+                porro doloremque officia voluptas! Accusamus ipsa mollitia quae
+                necessitatibus. Lorem ipsum dolor sit amet
+            </p>
+            <p>
+                consectetur adipisicing elit. Fuga, perferendis illum id eos nam
+                ad! Vero est numquam quas? Delectus qui est velit ex
+                necessitatibus nobis enim atque beatae error. Lorem ipsum dolor
+                sit amet consectetur, adipisicing elit. Fugiat eaque eos dolores
+                autem commodi illum sint, iure eligendi libero magni tempore
+                porro doloremque officia voluptas! Accusamus ipsa mollitia quae
+                necessitatibus. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Fuga, perferendis illum id eos nam ad! Vero
+                est numquam quas? Delectus qui est velit ex necessitatibus nobis
+                enim atque beatae error. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Fugiat eaque eos dolores autem commodi illum
+                sint, iure eligendi libero magni tempore porro doloremque
+                officia voluptas! Accusamus ipsa mollitia quae necessitatibus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+                perferendis illum id eos nam ad! Vero est numquam quas? Delectus
+                qui est velit ex necessitatibus
+            </p>
+            <p>
+                consectetur adipisicing elit. Fuga, perferendis illum id eos nam
+                ad! Vero est numquam quas? Delectus qui est velit ex
+                necessitatibus nobis enim atque beatae error. Lorem ipsum dolor
+                sit amet consectetur, adipisicing elit. Fugiat eaque eos dolores
+                autem commodi illum sint, iure eligendi libero magni tempore
+                porro doloremque officia voluptas! Accusamus ipsa mollitia quae
+                necessitatibus. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Fuga, perferendis illum id eos nam ad! Vero
+                est numquam quas? Delectus qui est velit ex necessitatibus nobis
+                enim atque beatae error. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Fugiat eaque eos dolores autem commodi illum
+                sint, iure eligendi libero magni tempore porro doloremque
+                officia voluptas! Accusamus ipsa mollitia quae necessitatibus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+                perferendis illum id eos nam ad! Vero est numquam quas? Delectus
+                qui est velit ex necessitatibus
+            </p>
+            <p>
+                consectetur adipisicing elit. Fuga, perferendis illum id eos nam
+                ad! Vero est numquam quas? Delectus qui est velit ex
+                necessitatibus nobis enim atque beatae error. Lorem ipsum dolor
+                sit amet consectetur, adipisicing elit. Fugiat eaque eos dolores
+                autem commodi illum sint, iure eligendi libero magni tempore
+                porro doloremque officia voluptas! Accusamus ipsa mollitia quae
+                necessitatibus. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Fuga, perferendis illum id eos nam ad! Vero
+                est numquam quas? Delectus qui est velit ex necessitatibus nobis
+                enim atque beatae error. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Fugiat eaque eos dolores autem commodi illum
+                sint, iure eligendi libero magni tempore porro doloremque
+                officia voluptas! Accusamus ipsa mollitia quae necessitatibus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+                perferendis illum id eos nam ad! Vero est numquam quas? Delectus
+                qui est velit ex necessitatibus
+            </p>
+            <p>
+                nobis enim atque beatae error. Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. Fugiat eaque eos dolores autem
+                commodi illum sint, iure eligendi libero magni tempore porro
+                doloremque officia voluptas! Accusamus ipsa mollitia quae
+                necessitatibus. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Fuga, perferendis illum id eos nam ad! Vero
+                est numquam quas? Delectus qui est velit ex necessitatibus nobis
+                enim atque beatae error. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Fugiat eaque eos dolores autem commodi illum
+                sint, iure eligendi libero magni tempore porro doloremque
+                officia voluptas! Accusamus ipsa mollitia quae necessitatibus.
+            </p>
+        </div>
+    </body>
+    <script>
+        window.addEventListener("scroll", () => {
+            let header = document.querySelector("header");
+            if (window.scrollY > 0) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        });
+        let outsideMenu = document.querySelector(".outsidemenu");
+        let menuList = document.querySelector(".menu-list");
+        let menuCancel = document.querySelector(".cancel");
+        let body = document.querySelector("body");
+        function menuopen() {
+            menuList.classList.toggle("menu-open");
+        }
+        function menucancel() {
+            menuList.classList.remove("menu-open");
+        }
+    </script>
+</html>

@@ -82,7 +82,7 @@ function checkStatus() {
 }
 
 container.addEventListener("dragstart", (e) => {
-    if (!isplaying) return;
+    if (!isPlaying) return;
     console.log(e.target);
     dragged.el = e.target;
     dragged.class = e.target.className;
@@ -92,7 +92,7 @@ container.addEventListener("dragover", (e) => {
     e.preventDefault();
 });
 container.addEventListener("drop", (e) => {
-    if (!isplaying) return;
+    if (!isPlaying) return;
 
     const index = [...e.target.parentNode.children].indexOf(e.target);
     if (e.target.className !== dragged.class) {
